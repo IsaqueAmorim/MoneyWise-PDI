@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyWise.Dominio", "MoneyWise.Dominio\MoneyWise.Dominio.csproj", "{FEE2C360-3079-401B-BEF6-02CA660C2A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyWise.Infra", "MoneyWise.Infra\MoneyWise.Infra.csproj", "{2D7EACF1-836B-427B-9DEE-3B67EEF949B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyWise.Test", "MoneyWise.Test\MoneyWise.Test.csproj", "{06FB1F60-690A-418F-8C7C-2F7C31A021AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyWise.Web", "MoneyWise.Web\MoneyWise.Web.csproj", "{E90A4F56-55AA-4FDC-ABB9-8D3849A36B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyWise.Infra.Database", "MoneyWise.Infra.Database\MoneyWise.Infra.Database.csproj", "{217A0B52-E5CC-4990-B0A9-D9C99A71CAEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyWise.Comum", "MoneyWise.Comum\MoneyWise.Comum.csproj", "{77F12E1C-F2A1-4AAF-897A-9868C33E2C74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyWise.Servico", "MoneyWise.Servico\MoneyWise.Servico.csproj", "{27B27680-4D1F-44C8-9C2B-4D22271EB948}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEE2C360-3079-401B-BEF6-02CA660C2A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE2C360-3079-401B-BEF6-02CA660C2A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE2C360-3079-401B-BEF6-02CA660C2A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE2C360-3079-401B-BEF6-02CA660C2A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7EACF1-836B-427B-9DEE-3B67EEF949B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7EACF1-836B-427B-9DEE-3B67EEF949B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7EACF1-836B-427B-9DEE-3B67EEF949B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7EACF1-836B-427B-9DEE-3B67EEF949B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FB1F60-690A-418F-8C7C-2F7C31A021AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FB1F60-690A-418F-8C7C-2F7C31A021AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FB1F60-690A-418F-8C7C-2F7C31A021AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FB1F60-690A-418F-8C7C-2F7C31A021AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90A4F56-55AA-4FDC-ABB9-8D3849A36B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90A4F56-55AA-4FDC-ABB9-8D3849A36B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90A4F56-55AA-4FDC-ABB9-8D3849A36B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90A4F56-55AA-4FDC-ABB9-8D3849A36B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217A0B52-E5CC-4990-B0A9-D9C99A71CAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217A0B52-E5CC-4990-B0A9-D9C99A71CAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217A0B52-E5CC-4990-B0A9-D9C99A71CAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217A0B52-E5CC-4990-B0A9-D9C99A71CAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F12E1C-F2A1-4AAF-897A-9868C33E2C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F12E1C-F2A1-4AAF-897A-9868C33E2C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F12E1C-F2A1-4AAF-897A-9868C33E2C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F12E1C-F2A1-4AAF-897A-9868C33E2C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B27680-4D1F-44C8-9C2B-4D22271EB948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B27680-4D1F-44C8-9C2B-4D22271EB948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B27680-4D1F-44C8-9C2B-4D22271EB948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B27680-4D1F-44C8-9C2B-4D22271EB948}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDFD12D2-697F-4F71-9FBF-2226586E83D6}
+	EndGlobalSection
+EndGlobal
