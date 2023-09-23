@@ -1,7 +1,10 @@
-﻿namespace MoneyWise.Dominio.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MoneyWise.Dominio.Entidades
 {
     public class Cartao
     {
+        [Key]
         public Guid Id { get; set; }
         public Guid UsuarioId { get; set; }
         public string NomeCartao { get; set; }
