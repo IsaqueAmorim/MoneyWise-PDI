@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace MoneyWise.Dominio.Entidades
 {
     public class Despesa
     {
+        [Key]
         public Guid Id { get; set; }
         public Guid UsuarioId { get; set; }
         public DateTime DataDaTransacao { get; set; }

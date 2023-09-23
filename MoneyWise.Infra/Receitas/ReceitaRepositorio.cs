@@ -2,7 +2,7 @@
 using MoneyWise.Dominio.Entidades;
 using MoneyWise.Dominio.Repositorios.ReceitaRepositorio;
 
-namespace MoneyWise.Infra.Receitas.Repositorios
+namespace MoneyWise.Infra.Receitas
 {
     public class ReceitaRepositorio : Repositorio<Receita>, IReceitaRepositorio
     {
