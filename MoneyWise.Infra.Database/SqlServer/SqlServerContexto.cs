@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MoneyWise.Dominio;
 using MoneyWise.Dominio.Receitas;
 
 namespace MoneyWise.Infra.Database.SqlServer
 {
-    public class SqlServerContexto : DbContext
+    public class SqlServerContexto : DbContext, IContexto
     {
         public SqlServerContexto()
         {
@@ -15,6 +16,7 @@ namespace MoneyWise.Infra.Database.SqlServer
 
             optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("SQL_CONNECTION"));
         }
+
         public DbSet<Receita> Receitas { get; set; }
     }
 }
