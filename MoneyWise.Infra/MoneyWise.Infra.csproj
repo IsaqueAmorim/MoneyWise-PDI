@@ -7,12 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MoneyWise.Comum\MoneyWise.Comum.csproj" />
-    <ProjectReference Include="..\MoneyWise.Dominio\MoneyWise.Dominio.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Receitas\Repositorios\" />
+    <ProjectReference Include="..\MoneyWise.Comum\MoneyWise.Comum.csproj" />
+    <ProjectReference Include="..\MoneyWise.Dominio\MoneyWise.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

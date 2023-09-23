@@ -1,11 +1,11 @@
 ﻿namespace MoneyWise.Infra
 {
-    public interface IRepositorio
+    public interface IRepositorio<T>
     {
-        T Adicionar<T>(T Entity);
-        int Remover<T>(T Entity);
-        T Atualizar<T>(T Entity);
-        T ObterPorId<T>(int id);
-        T ObterTodos<T>();
+        T Adicionar(T Entity);
+        int Remover(T Entity);
+        T Atualizar(T Entity);
+        T ObterPorId(Guid id);
+        IEnumerable<T> ObterTodos();
     }
 }
