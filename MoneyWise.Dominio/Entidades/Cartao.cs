@@ -2,7 +2,7 @@
 {
     public class Cartao
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public int UsuarioId { get; set; }
         public string NomeCartao { get; set; }
         public string Numero { get; set; }
