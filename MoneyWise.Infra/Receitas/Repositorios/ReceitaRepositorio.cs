@@ -1,13 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MoneyWise.Dominio.Receitas;
-using MoneyWise.Dominio.Receitas.Repositorios;
+using MoneyWise.Dominio.Entidades.Receitas;
+using MoneyWise.Dominio.Repositorios.ReceitaRepositorio;
+using System.Runtime.CompilerServices;
 
 namespace MoneyWise.Infra.Receitas.Repositorios
 {
     public class ReceitaRepositorio : Repositorio<Receita>, IReceitaRepositorio
     {
+        private readonly DbContext _contexto;
         public ReceitaRepositorio(DbContext contexto) : base(contexto)
         {
+            _contexto = contexto;
         }
     }
 }
