@@ -1,4 +1,4 @@
-﻿namespace MoneyWise.Dominio.Entidades.Receitas
+﻿namespace MoneyWise.Dominio.Entidades
 {
     public enum ReceitaCategoriaEnum
     {

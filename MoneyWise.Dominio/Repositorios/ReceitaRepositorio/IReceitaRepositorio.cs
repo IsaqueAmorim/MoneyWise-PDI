@@ -1,4 +1,4 @@
-﻿using MoneyWise.Dominio.Entidades.Receitas;
+﻿using MoneyWise.Dominio.Entidades;
 
 namespace MoneyWise.Dominio.Repositorios.ReceitaRepositorio
 {

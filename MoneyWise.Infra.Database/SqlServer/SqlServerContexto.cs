@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MoneyWise.Dominio.Entidades.Receitas;
+using MoneyWise.Dominio.Entidades;
 
 namespace MoneyWise.Infra.Database.SqlServer
 {
@@ -16,6 +16,8 @@ namespace MoneyWise.Infra.Database.SqlServer
             optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("SQL_CONNECTION"));
         }
 
+        public virtual DbSet<Usuario> Usuarios { get; set; }
+        
         public DbSet<Receita> Receitas { get; set; }
     }
 }
