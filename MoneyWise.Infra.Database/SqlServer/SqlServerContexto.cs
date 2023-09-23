@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MoneyWise.Dominio;
-using MoneyWise.Dominio.Receitas;
+using MoneyWise.Dominio.Entidades.Receitas;
 
 namespace MoneyWise.Infra.Database.SqlServer
 {
-    public class SqlServerContexto : DbContext, IContexto
+    public class SqlServerContexto : DbContext
     {
         public SqlServerContexto()
         {
