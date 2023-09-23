@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyWise.Comum\MoneyWise.Comum.csproj" />
+    <ProjectReference Include="..\MoneyWise.Dominio\MoneyWise.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>

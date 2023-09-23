@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyWise.Comum\MoneyWise.Comum.csproj" />
+    <ProjectReference Include="..\MoneyWise.Dominio\MoneyWise.Dominio.csproj" />
+    <ProjectReference Include="..\MoneyWise.Infra.Database\MoneyWise.Infra.Database.csproj" />
+    <ProjectReference Include="..\MoneyWise.Infra\MoneyWise.Infra.csproj" />
+    <ProjectReference Include="..\MoneyWise.Servico\MoneyWise.Servico.csproj" />
+  </ItemGroup>
+
 </Project>
