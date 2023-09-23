@@ -8,6 +8,8 @@ namespace MoneyWise.Dominio.Entidades
 {
     public class Despesa
     {
+        public Guid Id { get; set; }
+        public Guid UsuarioId { get; set; }
         public DateTime DataDaTransacao { get; set; }
         public string Categoria { get; set; }
         public decimal Valor { get; set; }
