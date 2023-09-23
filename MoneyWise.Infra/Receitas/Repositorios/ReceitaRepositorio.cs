@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MoneyWise.Dominio.Entidades.Receitas;
+using MoneyWise.Dominio.Entidades;
 using MoneyWise.Dominio.Repositorios.ReceitaRepositorio;
-using System.Runtime.CompilerServices;
 
 namespace MoneyWise.Infra.Receitas.Repositorios
 {

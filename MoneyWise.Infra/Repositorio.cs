@@ -6,24 +6,26 @@ namespace MoneyWise.Infra
     public class Repositorio<T> : IRepositorio<T> where T : class
     {
         private readonly DbContext _contexto;
+        
         public Repositorio(DbContext contexto)
         {
             _contexto = contexto;
         }
-        public T Adicionar(T Entity)
+
+        public T Adicionar(T entidade)
         {
-            _contexto.Set<T>().Add(Entity);
+            _contexto.Set<T>().Add(entidade);
             _contexto.SaveChanges();
 
-            return Entity;
+            return entidade;
         }
 
-        public T Atualizar(T Entity)
+        public T Atualizar(T entidade)
         {
-            _contexto.Set<T>().Update(Entity);
+            _contexto.Set<T>().Update(entidade);
             _contexto.SaveChanges();
 
-            return Entity;
+            return entidade;
         }
 
         public T ObterPorId(Guid id)
@@ -32,10 +34,10 @@ namespace MoneyWise.Infra
             {
                 if (id == Guid.Empty)
                 {
-                    throw new ArgumentException();
+                    throw new Exception("Informe o ID do registro.");
                 }
 
-                return  _contexto.Set<T>().FirstOrDefault(x => (Guid) x.GetType().GetProperty("Id").GetValue(x, null) == id);
+                return _contexto.Set<T>().FirstOrDefault(x => (Guid)x.GetType().GetProperty("Id").GetValue(x, null) == id);
 
             }
             catch(Exception ex)
@@ -47,12 +49,12 @@ namespace MoneyWise.Infra
 
         public IEnumerable<T> ObterTodos()
         {
-           return _contexto.Set<T>().ToList();
+            return _contexto.Set<T>().ToList();
         }
 
-        public int Remover(T Entity)
+        public int Remover(T entidade)
         {
-            _contexto.Set<T>().Remove(Entity);
+            _contexto.Set<T>().Remove(entidade);
             
             return _contexto.SaveChanges();
         }
