@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Integracao\**" />
+    <EmbeddedResource Remove="Integracao\**" />
+    <None Remove="Integracao\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="Moq" Version="4.20.69" />
@@ -29,10 +35,6 @@
     <ProjectReference Include="..\MoneyWise.Dominio\MoneyWise.Dominio.csproj" />
     <ProjectReference Include="..\MoneyWise.Servico\MoneyWise.Servico.csproj" />
     <ProjectReference Include="..\MoneyWise.Web\MoneyWise.Web.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Integracao\" />
   </ItemGroup>
 
 </Project>
