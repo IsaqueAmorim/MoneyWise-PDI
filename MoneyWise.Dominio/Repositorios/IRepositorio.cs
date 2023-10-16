@@ -2,11 +2,11 @@
 {
     public interface IRepositorio<T> where T: class
     {
-        T Adicionar(T Entidade);
+        T Adicionar(T entidade);
         
-        int Remover(T Entidade);
+        int Remover(T entidade);
         
-        T Atualizar(T Entidade);
+        T Atualizar(T entidade);
         
         T ObterPorId(Guid id);
 

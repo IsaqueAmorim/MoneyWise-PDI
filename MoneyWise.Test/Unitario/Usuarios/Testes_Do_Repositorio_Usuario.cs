@@ -1,8 +1,7 @@
 using MoneyWise.Dominio.Entidades;
-using MoneyWise.Infra.Database.SqlServer;
+using MoneyWise.Infra.Database.Contexto;
 using MoneyWise.Infra.Usuarios;
 using Moq.EntityFrameworkCore;
-using System.Reflection.Metadata;
 
 namespace MoneyWise.Test.Unitario.Usuarios
 {

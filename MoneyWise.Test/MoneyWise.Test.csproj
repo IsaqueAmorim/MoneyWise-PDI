@@ -31,8 +31,4 @@
     <ProjectReference Include="..\MoneyWise.Web\MoneyWise.Web.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Integracao\" />
-  </ItemGroup>
-
 </Project>

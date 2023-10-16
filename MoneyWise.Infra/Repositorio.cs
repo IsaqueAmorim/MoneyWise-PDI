@@ -44,7 +44,6 @@ namespace MoneyWise.Infra
             {
                 throw ex;
             }
-
         }
 
         public IEnumerable<T> ObterTodos()
