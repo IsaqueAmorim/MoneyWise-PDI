@@ -75,11 +75,11 @@ namespace MoneyWise.Web.Controladores
 
                 _repositorio.Adicionar(despesa);
 
-                return Created($"usuarios/{despesa.Id}", despesa);
+                return Created($"despesas/{despesa.Id}", despesa);
             }
             catch (Exception erro)
             {
-                return BadRequest($"Erro ao criar usuário :: {erro.Message}");
+                return BadRequest($"Erro ao criar despesa :: {erro.Message}");
             }
         }
 
@@ -96,7 +96,7 @@ namespace MoneyWise.Web.Controladores
             }
             catch (Exception erro)
             {
-                return NotFound($"Erro ao atualizar usuário. {erro}");
+                return NotFound($"Erro ao atualizar despesa. {erro}");
             }
         }
 
@@ -113,7 +113,7 @@ namespace MoneyWise.Web.Controladores
             }
             catch (Exception erro)
             {
-                return NotFound($"Erro ao deletar usuário. {erro}");
+                return NotFound($"Erro ao deletar despesa. {erro}");
             }
         }
     }
