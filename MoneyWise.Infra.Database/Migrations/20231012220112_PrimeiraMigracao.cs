@@ -40,6 +40,24 @@ namespace MoneyWise.Infra.Database.Migrations
                 {
                     table.PrimaryKey("PK_Usuarios", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Despesas",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UsuarioId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DataDaTransacao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Categoria = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    MetodoDePagamento = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StatusDePagamento = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Despesas", x => x.Id);
+                });
         }
 
         /// <inheritdoc />
@@ -50,6 +68,9 @@ namespace MoneyWise.Infra.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "Usuarios");
+
+            migrationBuilder.DropTable(
+                name: "Despesas");
         }
     }
 }

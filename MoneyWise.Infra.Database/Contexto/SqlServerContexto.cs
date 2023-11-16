@@ -5,10 +5,8 @@ namespace MoneyWise.Infra.Database.Contexto
 {
     public class SqlServerContexto : DbContext
     {
-        public SqlServerContexto()
-        {
+        public SqlServerContexto() {}
 
-        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -18,6 +16,8 @@ namespace MoneyWise.Infra.Database.Contexto
 
         public virtual DbSet<Usuario> Usuarios { get; set; }
         
-        public DbSet<Receita> Receitas { get; set; }
+        public virtual DbSet<Receita> Receitas { get; set; }
+
+        public virtual DbSet<Despesa> Despesas { get; set; }
     }
 }
