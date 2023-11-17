@@ -6,11 +6,8 @@ namespace MoneyWise.Dominio.Entidades
     {
         [Key]
         public Guid Id { get; set; }
-        
-        public required string Nome { get; set; }
-        
+        public string? Nome { get; set; }
         public required string Email { get; set; }
-        
         public required string Senha { get; set; }
     }
 }

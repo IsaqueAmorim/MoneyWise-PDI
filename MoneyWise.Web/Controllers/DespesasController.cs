@@ -2,7 +2,7 @@
 using MoneyWise.Dominio.Entidades;
 using MoneyWise.Servico.Despesas;
 
-namespace MoneyWise.Web.Controladores
+namespace MoneyWise.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

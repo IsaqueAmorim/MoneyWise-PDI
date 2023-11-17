@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace MoneyWise.Servico.Usuarios
+namespace MoneyWise.Comum 
 {
     public static class HasherSenha
     {
@@ -20,8 +20,8 @@ namespace MoneyWise.Servico.Usuarios
         public static bool VerificarHash(string senhaInserida, string senhaSalva)
         {
             var elementos = senhaSalva.Split(SEPARADOR);
-            var salt = Convert.FromBase64String(elementos[0]);
-            var hashEsperado = Convert.FromBase64String(elementos[1]);
+            var salt = Convert.FromBase64String(elementos.First());
+            var hashEsperado = Convert.FromBase64String(elementos.Last());
 
             var hash = Rfc2898DeriveBytes.Pbkdf2(senhaInserida, salt, NUMERO_DE_ITERACOES, HashAlgorithmName.SHA256, TAMANHO_HASH);
 

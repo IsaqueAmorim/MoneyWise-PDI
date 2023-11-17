@@ -1,4 +1,8 @@
-﻿namespace MoneyWise.Web
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
+namespace MoneyWise.Web
 {
     public class Startup
     {
@@ -12,8 +16,10 @@
         public void ConfigureServices(IServiceCollection services)
         {
             ConfigurarInjecaoDeDependencia(services);
+            ConfigurarJwtToken(services);
 
             services.AddControllers();
+
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(
@@ -21,6 +27,31 @@
                     {
                         policy.AllowAnyOrigin().AllowAnyMethod();
                     });
+            });
+        }
+
+        private void ConfigurarJwtToken(IServiceCollection services)
+        {
+            var chaveSecreta = Environment.GetEnvironmentVariable("JWT_SECRET");
+
+            if (string.IsNullOrEmpty(chaveSecreta))
+                throw new Exception("Variável de ambiente [JWT_SECRET] inválida.");
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(chaveSecreta)),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                };
             });
         }
 

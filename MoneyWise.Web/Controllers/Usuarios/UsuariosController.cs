@@ -2,9 +2,9 @@
 using MoneyWise.Dominio.Entidades;
 using MoneyWise.Servico.Usuarios;
 
-namespace MoneyWise.Web.Controladores
+namespace MoneyWise.Web.Controllers.Usuarios
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
     {

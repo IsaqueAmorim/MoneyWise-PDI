@@ -1,4 +1,5 @@
-﻿using MoneyWise.Dominio.Entidades;
+﻿using MoneyWise.Comum;
+using MoneyWise.Dominio.Entidades;
 using MoneyWise.Dominio.Repositorios.Usuarios;
 using System.Text.RegularExpressions;
 
