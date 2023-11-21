@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
+  margin-right: 0.125rem
+}
+
+html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+  margin-left: 0.125rem
+}
+
+.myAppDemoWT .myCustomText {
+  display: inline-block;
+  font-weight: bold;
+  font-family: Poppins;
+}
+
+/*  ProductRating */
+.myAppDemoWTProductRating {
+	padding: 0.75rem;
+}
+.myAppDemoWTProductRating .sapMRI {
+	vertical-align: initial;
+}
