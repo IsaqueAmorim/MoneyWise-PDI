@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MoneyWise.Dominio.Entidades;
-using MoneyWise.Dominio.Repositorios;
 using MoneyWise.Infra;
 using MoneyWise.Servico.Interfaces;
 

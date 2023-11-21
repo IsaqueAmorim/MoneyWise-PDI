@@ -4,7 +4,7 @@ using MoneyWise.Servico.Usuarios;
 
 namespace MoneyWise.Web.Controladores
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
     {
