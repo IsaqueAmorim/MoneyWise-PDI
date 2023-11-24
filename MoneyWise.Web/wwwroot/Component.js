@@ -7,7 +7,7 @@ sap.ui.define(
         return UIComponent.extend("sap.ui.moneywise.Component", {
             metadata: {
                 interfaces: ["sap.ui.core.IAsyncContentCreation"],
-                manifest: "json",
+                manifest: "json",  
             },
             init: function () {
                 UIComponent.prototype.init.apply(this, arguments);
