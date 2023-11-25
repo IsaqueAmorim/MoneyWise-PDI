@@ -1,0 +1,63 @@
+<mvc:View controllerName="sap.ui.moneywise.controller.TabelaDeDespesas"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Page title="MoneyWise">
+		<content>
+			<Table id="despesasTables" items="{/despesas}">
+				<headerToolbar>
+					<Toolbar>
+						<content>
+							<Button icon="sap-icon://add" text="Adicionar" press=".aoClicarBotaoAdicionar"/>
+							<ToolbarSpacer/>
+							<SearchField width="60%" placeholder="pesquisar" search=".aoPesquisar"/>
+						</content>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="4rem">
+						<Label text="Id"/>
+					</Column>
+					<Column>
+						<Label text="Descrição"/>
+					</Column>
+					<Column>
+						<Label text="Valor"/>
+					</Column>
+					<Column>
+						<Label text="Categoria"/>
+					</Column>
+					<Column>
+						<Label text="Conta/Cartão"/>
+					</Column>
+					<Column>
+						<Label text="Data"/>
+					</Column>
+				</columns>
+				<items >
+					<ColumnListItem type="Navigation" press=".aoClicarNoItem">
+						<cells>
+							<Text text="{id}"/>
+							<Text text="{descricao}"/>
+							<Text src="{valor}"/>
+							<Image text="{
+														path: 'categoria',
+														formatter: '.formatter.iconesTipo'
+													}"/>	
+							<Text src="{conta}"/>
+							<Text text="{path: 'data',
+																		type: 'sap.ui.model.type.Date',
+																		 formatOptions: {
+																		 style: 'short',
+																		 source: {
+																			 pattern: 'yyyy-MM-ddTHH:mm:ss.mmm'
+																		 }
+																	}
+													}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
