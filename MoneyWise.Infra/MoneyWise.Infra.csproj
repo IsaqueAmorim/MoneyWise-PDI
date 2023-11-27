@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MoneyWise.Comum\MoneyWise.Comum.csproj" />
     <ProjectReference Include="..\MoneyWise.Dominio\MoneyWise.Dominio.csproj" />
+    <ProjectReference Include="..\MoneyWise.Infra.Database\MoneyWise.Infra.Database.csproj" />
   </ItemGroup>
 
 </Project>
