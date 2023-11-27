@@ -5,7 +5,6 @@ namespace MoneyWise.Servico.Interfaces
 {
     public interface IDespesaRepositorio : IRepositorio<Despesa>
     {
-        List<Despesa> PegarTodasNoPeriodo(DateTime dataInicial, DateTime dataFinal);
-        List<Despesa> PegarTodasPorValor(decimal valor);
+        List<Despesa> ObterPorPeriodo(DateTime dataInicial, DateTime dataFinal);
     }
 }

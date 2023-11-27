@@ -27,25 +27,15 @@ namespace MoneyWise.Web.Controladores
             }
         }
 
-        [HttpGet]
-        public IActionResult ObterPorPeriodo(DateTime dataInicial, DateTime dataFinal)
+        [HttpGet("periodo")]
+        public IActionResult ObterPorPeriodo([FromQuery] DateTime dataInicial,[FromQuery] DateTime dataFinal)
         {
             try
             {
-                return Ok(_repositorio.ObterDespesasPorPeriodo(dataInicial, dataFinal));
-            }
-            catch (Exception erro)
-            {
-                return NotFound($"Erro ao obter as despesas. {erro}");
-            }
-        }
+                if (dataInicial == DateTime.MinValue || dataFinal == DateTime.MaxValue) 
+                    return BadRequest();
 
-        [HttpGet]
-        public IActionResult ObterPorValor(decimal valor)
-        {
-            try
-            {
-                return Ok(_repositorio.ObterDespesasPorValor(valor));
+                return Ok(_repositorio.ObterDespesasPorPeriodo(dataInicial, dataFinal));
             }
             catch (Exception erro)
             {
@@ -58,6 +48,9 @@ namespace MoneyWise.Web.Controladores
         {
             try
             {
+                if (id == Guid.Empty) 
+                    return BadRequest();
+
                 return Ok(_repositorio.ObterPorId(id));
             }
             catch (Exception erro)
@@ -71,7 +64,8 @@ namespace MoneyWise.Web.Controladores
         {
             try
             {
-                if (despesa == null) return BadRequest();
+                if (despesa == null) 
+                    return BadRequest();
 
                 _repositorio.Adicionar(despesa);
 
@@ -88,7 +82,8 @@ namespace MoneyWise.Web.Controladores
         {
             try
             {
-                if (despesa == null) return BadRequest();
+                if (despesa == null) 
+                    return BadRequest();
 
                 _repositorio.Atualizar(despesa);
 
@@ -105,7 +100,8 @@ namespace MoneyWise.Web.Controladores
         {
             try
             {
-                if (despesa == null) return BadRequest();
+                if (despesa == null) 
+                    return BadRequest();
 
                 _repositorio.Remover(despesa);
 

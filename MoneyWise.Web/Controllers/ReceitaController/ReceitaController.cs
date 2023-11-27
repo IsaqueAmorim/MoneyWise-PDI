@@ -26,14 +26,15 @@ namespace MoneyWise.Web.Controllers.ReceitaController
             }
         }
 
-        [HttpGet("parametros")]
+        [HttpGet("periodo")]
         public IActionResult ObterPorPeriodo([FromQuery] DateTime dataInicial, [FromQuery] DateTime dataFinal)
         {
             try
             {
-                var receitas = _receitaRepositorio.ObterTodos().Where(x => x.DataTrasacao >= dataInicial
-                                                                           && x.DataTrasacao <= dataFinal).ToList();
-                return Ok(receitas);
+                if(dataInicial == DateTime.MinValue || dataFinal == DateTime.MinValue)
+                    return BadRequest();
+
+                return Ok(_receitaRepositorio.ObterReceitasPorPeriodo(dataInicial, dataFinal));
             } catch (Exception ex)
             {
                 return BadRequest(ex.Message);
@@ -45,12 +46,14 @@ namespace MoneyWise.Web.Controllers.ReceitaController
         {
             try
             {
+                if(id == Guid.Empty)
+                    return BadRequest();
+
                 return Ok(_receitaRepositorio.ObterPorId(id));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                return BadRequest(ex.Message);
             }
         }
 
@@ -59,26 +62,32 @@ namespace MoneyWise.Web.Controllers.ReceitaController
         {
             try
             {
+                if(receita == null)
+                    return BadRequest();
+
                 return Ok(_receitaRepositorio.Atualizar(receita));
             }
-            catch (Exception)
+            catch (Exception ex )
             {
 
-                throw;
+                return BadRequest(ex.Message);
             }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult RemoverReceita(Receita receita)
+        public IActionResult RemoverReceita(Guid id)
         {
             try
             {
+                var receita = _receitaRepositorio.ObterPorId(id);
+                
                 _receitaRepositorio.Remover(receita);
+
                 return NoContent();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                return BadRequest(ex);
             }
         }
     }

@@ -33,12 +33,7 @@ namespace MoneyWise.Servico.Despesas
 
         public List<Despesa> ObterDespesasPorPeriodo(DateTime dataInicial, DateTime dataFinal)
         {
-            return _repositorio.PegarTodasNoPeriodo(dataInicial, dataFinal);
-        }
-
-        public List<Despesa> ObterDespesasPorValor(decimal valor)
-        {
-            return _repositorio.PegarTodasPorValor(valor);
+            return _repositorio.ObterPorPeriodo(dataInicial, dataFinal);
         }
 
         public int Remover(Despesa despesa)
